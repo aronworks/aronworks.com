@@ -1,15 +1,30 @@
 {
-  "name": "aronworks-coming-soon",
+  "name": "new-aronworks.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build && next export"
   },
   "dependencies": {
-    "next": "10.0.9",
+    "@n8tb1t/use-scroll-position": "^2.0.3",
+    "@sendgrid/mail": "^7.4.2",
+    "aos": "^2.3.4",
+    "bootstrap": "^4.6.0",
+    "next": "10.0.6",
+    "next-images": "^1.7.0",
+    "polished": "^4.1.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-bootstrap": "^1.4.3",
+    "react-countup": "^4.3.3",
+    "react-dom": "17.0.1",
+    "react-lazyload": "^3.1.1",
+    "react-player": "^2.8.2",
+    "react-select": "^4.2.1",
+    "sass": "^1.32.7",
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5"
   }
 }

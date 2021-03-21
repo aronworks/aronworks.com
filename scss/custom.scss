@@ -1,0 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.heighlight {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #f25c54, #455a64);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

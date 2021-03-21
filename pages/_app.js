@@ -1,7 +1,18 @@
-import '../styles/globals.css'
+import Layout from "../components/Layout";
+import { GlobalProvider } from "../context/GlobalContext";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+import "../scss/bootstrap.scss";
+import "../scss/main.scss";
+import "../scss/custom.scss";
 
-export default MyApp
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <GlobalProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </GlobalProvider>
+  );
+};
+
+export default MyApp;
