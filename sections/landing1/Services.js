@@ -106,7 +106,7 @@ const Services = () => {
                   We do SEOs to bring in organic traffic which attracts
                   prospective customers to your business.
                 </p>
-                <Link href="/seo">
+                <Link href="/seo-for-business">
                   <a className="gr-text-9 btn-link with-icon mt-auto text-black">
                     Learn more{" "}
                     <i className="icon icon-tail-right font-weight-bold"></i>
