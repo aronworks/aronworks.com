@@ -30,7 +30,7 @@ const IndexPage = () => {
           <div
             className="bg-image bg-gradient bg-gradient-black pb-17 pt-24 pt-lg-32 pb-lg-28"
             css={`
-              background-image: url(https://images.unsplash.com/photo-1593437955835-fc8c51725430?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1864&q=80);
+              background-image: url();
             `}
           >
             <Container>

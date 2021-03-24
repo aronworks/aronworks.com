@@ -118,7 +118,7 @@ const IndexPage = () => {
                     <Image
                       src="/assets/images/web-development1.svg"
                       alt="Web Development"
-                      width={600}
+                      width={400}
                       height={400}
                     />
                   </div>
