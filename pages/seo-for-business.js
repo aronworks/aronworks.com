@@ -39,9 +39,9 @@ const IndexPage = () => {
         />
 
         {/* Item Property Meta Tag */}
-        <meta itemprop="name" content="SEO for Business - AronWorks" />
+        <meta itemProp="name" content="SEO for Business - AronWorks" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="We do SEOs to bring in organic traffic which attracts prospective customers to your business."
         />
       </Head>

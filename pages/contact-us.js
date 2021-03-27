@@ -163,9 +163,9 @@ const Contact = () => {
         />
 
         {/* Item Property Meta Tag */}
-        <meta itemprop="name" content="Contact Us - AronWorks" />
+        <meta itemProp="name" content="Contact Us - AronWorks" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
         />
       </Head>

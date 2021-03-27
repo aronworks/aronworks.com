@@ -54,11 +54,11 @@ const TermsConditions = () => {
 
         {/* Item Property Meta Tag */}
         <meta
-          itemprop="name"
+          itemProp="name"
           content="5 reasons why small businesses need a website in 2021 - AronWorks"
         />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Websites are more accessible and affordable, still for
           some reason, more than 40% of small businesses have been
           hesitant to go for one."

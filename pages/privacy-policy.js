@@ -37,9 +37,9 @@ const TermsConditions = () => {
         />
 
         {/* Item Property Meta Tag */}
-        <meta itemprop="name" content="Privacy Policy - AronWorks" />
+        <meta itemProp="name" content="Privacy Policy - AronWorks" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Review the AronWorks privacy policy."
         />
       </Head>

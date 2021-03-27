@@ -46,11 +46,11 @@ const IndexPage = () => {
 
         {/* Item Property Meta Tag */}
         <meta
-          itemprop="name"
+          itemProp="name"
           content="Professional Content Writing - AronWorks"
         />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="We write contents for Blogs, and Web pages which includes your home, landing, about us, contact us etc."
         />
       </Head>

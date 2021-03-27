@@ -49,11 +49,11 @@ const TermsConditions = () => {
 
         {/* Item Property Meta Tag */}
         <meta
-          itemprop="name"
+          itemProp="name"
           content="7 reasons why you should hire a professional writer for your business - AronWorks"
         />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="What is that fuss about professional writing? Can’t an English teacher do the job?"
         />
       </Head>

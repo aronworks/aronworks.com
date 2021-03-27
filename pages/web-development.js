@@ -44,9 +44,9 @@ const IndexPage = () => {
         />
 
         {/* Item Property Meta Tag */}
-        <meta itemprop="name" content=">Web Development Service - AronWorks" />
+        <meta itemProp="name" content=">Web Development Service - AronWorks" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="We build affordable, accessible and engaging websites for small and medium scale business."
         />
       </Head>

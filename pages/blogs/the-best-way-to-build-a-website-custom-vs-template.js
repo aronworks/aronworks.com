@@ -54,11 +54,11 @@ const TermsConditions = () => {
 
         {/* Item Property Meta Tag */}
         <meta
-          itemprop="name"
+          itemProp="name"
           content="The best way to build a website: custom vs template - AronWorks"
         />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Before getting into custom or template websites, will try
           to throw a little light on what is a custom built website
           and template website."
