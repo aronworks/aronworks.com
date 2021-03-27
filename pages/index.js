@@ -33,7 +33,10 @@ const IndexPage = () => {
           property="og:description"
           content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
         />
-
+        <meta
+          property="og:image"
+          content="https://aronworks.com/assets/images/meta/home-page.jpg"
+        />
         <meta property="og:site_name" content="aronworks.com" />
         <meta name="og:email" content="hello@aronworks.com" />
         <meta name="og:phone_number" content="+917708521528" />
@@ -47,6 +50,10 @@ const IndexPage = () => {
           name="twitter:description"
           content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
         />
+        <meta
+          name="twitter:image"
+          content="https://aronworks.com/assets/images/meta/home-page.jpg"
+        />
 
         {/* Item Property Meta Tag */}
         <meta
@@ -57,6 +64,8 @@ const IndexPage = () => {
           itemprop="description"
           content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
         />
+
+        <meta property="og:locale" content="en" />
       </Head>
       <PageWrapper
         headerConfig={{
