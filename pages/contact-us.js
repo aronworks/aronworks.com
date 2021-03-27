@@ -142,6 +142,32 @@ const Contact = () => {
           name="description"
           content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aronworks.com/contact-us" />
+
+        <meta property="og:title" content="Contact Us - AronWorks" />
+        <meta
+          property="og:description"
+          content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta name="twitter:title" content="Contact Us - AronWorks" />
+        <meta
+          name="twitter:description"
+          content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta itemprop="name" content="Contact Us - AronWorks" />
+        <meta
+          itemprop="description"
+          content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
+        />
       </Head>
       <PageWrapper
         headerConfig={{

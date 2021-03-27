@@ -13,7 +13,45 @@ const IndexPage = () => {
         <title>Professional Content Writing - AronWorks</title>
         <meta
           name="description"
-          content="We do SEOs to bring in organic traffic which attracts prospective customers to your business."
+          content="We write contents for Blogs, and Web pages which includes your home, landing, about us, contact us etc."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/content-writing"
+        />
+
+        <meta
+          property="og:title"
+          content="Professional Content Writing - AronWorks"
+        />
+        <meta
+          property="og:description"
+          content="We write contents for Blogs, and Web pages which includes your home, landing, about us, contact us etc."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta
+          name="twitter:title"
+          content="Professional Content Writing - AronWorks"
+        />
+        <meta
+          name="twitter:description"
+          content="We write contents for Blogs, and Web pages which includes your home, landing, about us, contact us etc."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta
+          itemprop="name"
+          content="Professional Content Writing - AronWorks"
+        />
+        <meta
+          itemprop="description"
+          content="We write contents for Blogs, and Web pages which includes your home, landing, about us, contact us etc."
         />
       </Head>
       <PageWrapper
@@ -28,12 +66,15 @@ const IndexPage = () => {
         }}
       >
         <>
-          <div
-            className="bg-image bg-gradient bg-gradient-black pb-17 pt-24 pt-lg-32 pb-lg-28"
-            css={`
-              background-image: url(https://images.unsplash.com/photo-1505682499293-233fb141754c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80);
-            `}
-          >
+          <div className="bg-black bg-gradient pb-17 pt-24 pt-lg-32 pb-lg-28">
+            <Image
+              className="opacity-0-4"
+              alt="SEO for Business"
+              src="/assets/images/content-writting-banner.jpg"
+              layout="fill"
+              objectFit="cover"
+              quality={75}
+            />
             <Container>
               <Row className="justify-content-center align-items-center">
                 <Col

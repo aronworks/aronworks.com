@@ -1,8 +1,6 @@
 import React from "react";
 import Head from "next/head";
 
-// import dynamic from "next/dynamic";
-
 import PageWrapper from "../components/PageWrapper";
 import Hero from "../sections/landing1/Hero";
 import Services from "../sections/landing1/Services";
@@ -14,22 +12,50 @@ import News from "../sections/landing1/News";
 import CTA from "../sections/landing1/CTA";
 import FAQ from "../sections/landing1/FAQ";
 
-// const Feature = dynamic(() => import("../sections/landing1/Feature"));
-// // const Pricing = dynamic(() => import("../sections/landing1/Pricing"));
-// // const Testimonials = dynamic(() => import("../sections/landing1/Testimonials"));
-// const News = dynamic(() => import("../sections/landing1/News"));
-// const CTA = dynamic(() => import("../sections/landing1/CTA"));
-// const FAQ = dynamic(() => import("../sections/landing1/FAQ"));
-
 const IndexPage = () => {
   return (
     <>
       <Head>
         <title>Website Development Partner - AronWorks</title>
-
+        <meta name="title" content="Website Development Partner - AronWorks" />
         <meta
           name="description"
-          content="Partner with for all your Web Design, Web Development, Content Writing and SEO needs."
+          content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aronworks.com" />
+
+        <meta
+          property="og:title"
+          content="Website Development Partner - AronWorks"
+        />
+        <meta
+          property="og:description"
+          content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta
+          name="twitter:title"
+          content="Website Development Partner - AronWorks"
+        />
+        <meta
+          name="twitter:description"
+          content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta
+          itemprop="name"
+          content="Website Development Partner - AronWorks"
+        />
+        <meta
+          itemprop="description"
+          content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
         />
       </Head>
       <PageWrapper

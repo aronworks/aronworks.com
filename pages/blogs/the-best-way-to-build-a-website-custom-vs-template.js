@@ -9,11 +9,56 @@ const TermsConditions = () => {
     <>
       <Head>
         <title>
-          The best way to build a website: custom vs template. - AronWorks
+          The best way to build a website: custom vs template - AronWorks
         </title>
 
         <meta
           name="description"
+          content="Before getting into custom or template websites, will try
+          to throw a little light on what is a custom built website
+          and template website."
+        />
+
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/blogs/the-best-way-to-build-a-website-custom-vs-template"
+        />
+
+        <meta
+          property="og:title"
+          content="The best way to build a website: custom vs template - AronWorks"
+        />
+        <meta
+          property="og:description"
+          content="Before getting into custom or template websites, will try
+          to throw a little light on what is a custom built website
+          and template website."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta
+          name="twitter:title"
+          content="The best way to build a website: custom vs template - AronWorks"
+        />
+        <meta
+          name="twitter:description"
+          content="Before getting into custom or template websites, will try
+          to throw a little light on what is a custom built website
+          and template website."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta
+          itemprop="name"
+          content="The best way to build a website: custom vs template - AronWorks"
+        />
+        <meta
+          itemprop="description"
           content="Before getting into custom or template websites, will try
           to throw a little light on what is a custom built website
           and template website."

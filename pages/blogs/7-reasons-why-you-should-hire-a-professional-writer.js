@@ -15,8 +15,46 @@ const TermsConditions = () => {
 
         <meta
           name="description"
-          content="What is that fuss about professional writing? Can’t an
-          English teacher do the job?"
+          content="What is that fuss about professional writing? Can’t an English teacher do the job?"
+        />
+
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/blogs/5-reasons-why-small-business-needs-website-in-2021"
+        />
+
+        <meta
+          property="og:title"
+          content="7 reasons why you should hire a professional writer for your business - AronWorks"
+        />
+        <meta
+          property="og:description"
+          content="What is that fuss about professional writing? Can’t an English teacher do the job?"
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta
+          name="twitter:title"
+          content="7 reasons why you should hire a professional writer for your business - AronWorks"
+        />
+        <meta
+          name="twitter:description"
+          content="What is that fuss about professional writing? Can’t an English teacher do the job?"
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta
+          itemprop="name"
+          content="7 reasons why you should hire a professional writer for your business - AronWorks"
+        />
+        <meta
+          itemprop="description"
+          content="What is that fuss about professional writing? Can’t an English teacher do the job?"
         />
       </Head>
       <PageWrapper

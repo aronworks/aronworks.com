@@ -12,7 +12,37 @@ const IndexPage = () => {
         <title>SEO for Business - AronWorks</title>
         <meta
           name="description"
-          content="We write contents for Blogs, and Web pages which includes your home, landing, about us, contact us etc."
+          content="We do SEOs to bring in organic traffic which attracts prospective customers to your business."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/seo-for-business"
+        />
+
+        <meta property="og:title" content="SEO for Business - AronWorks" />
+        <meta
+          property="og:description"
+          content="We do SEOs to bring in organic traffic which attracts prospective customers to your business."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta name="twitter:title" content="SEO for Business - AronWorks" />
+        <meta
+          name="twitter:description"
+          content="We do SEOs to bring in organic traffic which attracts prospective customers to your business."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta itemprop="name" content="SEO for Business - AronWorks" />
+        <meta
+          itemprop="description"
+          content="We do SEOs to bring in organic traffic which attracts prospective customers to your business."
         />
       </Head>
       <PageWrapper
@@ -27,12 +57,15 @@ const IndexPage = () => {
         }}
       >
         <>
-          <div
-            className="bg-image bg-gradient bg-gradient-black pb-17 pt-24 pt-lg-32 pb-lg-28"
-            css={`
-              background-image: url();
-            `}
-          >
+          <div className="bg-black bg-gradient pb-17 pt-24 pt-lg-32 pb-lg-28">
+            <Image
+              className="opacity-0-4"
+              alt="SEO for Business"
+              src="/assets/images/seo-for-business-banner.jpg"
+              layout="fill"
+              objectFit="cover"
+              quality={75}
+            />
             <Container>
               <Row className="justify-content-center align-items-center">
                 <Col

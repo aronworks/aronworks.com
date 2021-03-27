@@ -8,6 +8,39 @@ const TermsConditions = () => {
     <>
       <Head>
         <title>Terms and Conditions - AronWorks</title>
+        <meta
+          name="description"
+          content="Review the AronWorks Terms and Conditions"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/terms-conditions"
+        />
+
+        <meta property="og:title" content="Terms and Conditions - AronWorks" />
+        <meta
+          property="og:description"
+          content="Review the AronWorks Terms and Conditions"
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta name="twitter:title" content="Terms and Conditions - AronWorks" />
+        <meta
+          name="twitter:description"
+          content="Review the AronWorks Terms and Conditions"
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta itemprop="name" content="Terms and Conditions - AronWorks" />
+        <meta
+          itemprop="description"
+          content="Review the AronWorks Terms and Conditions"
+        />
       </Head>
       <PageWrapper
         headerConfig={{

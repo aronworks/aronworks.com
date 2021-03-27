@@ -38,8 +38,8 @@ const Footer = () => {
                 className="footer-logo mb-7"
               />
               <p className="gr-text-11">
-                Partner with for all your Web Design, Web Development, Content
-                Writing and SEO needs
+                Partner with us for all your Web Design, Web Development,
+                Content Writing and SEO needs.
               </p>
               {/* <ul className="social-icons py-7 list-unstyled mb-7 mb-lg-0">
                 <li className="mr-2">

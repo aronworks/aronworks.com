@@ -18,6 +18,51 @@ const TermsConditions = () => {
           some reason, more than 40% of small businesses have been
           hesitant to go for one."
         />
+
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/blogs/5-reasons-why-small-business-needs-website-in-2021"
+        />
+
+        <meta
+          property="og:title"
+          content="5 reasons why small businesses need a website in 2021 - AronWorks"
+        />
+        <meta
+          property="og:description"
+          content="Websites are more accessible and affordable, still for
+          some reason, more than 40% of small businesses have been
+          hesitant to go for one."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta
+          name="twitter:title"
+          content="5 reasons why small businesses need a website in 2021 - AronWorks"
+        />
+        <meta
+          name="twitter:description"
+          content="Websites are more accessible and affordable, still for
+          some reason, more than 40% of small businesses have been
+          hesitant to go for one."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta
+          itemprop="name"
+          content="5 reasons why small businesses need a website in 2021 - AronWorks"
+        />
+        <meta
+          itemprop="description"
+          content="Websites are more accessible and affordable, still for
+          some reason, more than 40% of small businesses have been
+          hesitant to go for one."
+        />
       </Head>
       <PageWrapper
         headerConfig={{

@@ -13,6 +13,35 @@ const TermsConditions = () => {
           name="description"
           content="Review the AronWorks privacy policy."
         />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/privacy-policy"
+        />
+
+        <meta property="og:title" content="Privacy Policy - AronWorks" />
+        <meta
+          property="og:description"
+          content="Review the AronWorks privacy policy."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta name="twitter:title" content="Privacy Policy - AronWorks" />
+        <meta
+          name="twitter:description"
+          content="Review the AronWorks privacy policy."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta itemprop="name" content="Privacy Policy - AronWorks" />
+        <meta
+          itemprop="description"
+          content="Review the AronWorks privacy policy."
+        />
       </Head>
       <PageWrapper
         headerConfig={{

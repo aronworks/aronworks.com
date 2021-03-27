@@ -12,7 +12,42 @@ const IndexPage = () => {
         <title>Web Development Service - AronWorks</title>
         <meta
           name="description"
-          content="We build affordable, accesible and engaging websites for small and medium scale business."
+          content="We build affordable, accessible and engaging websites for small and medium scale business."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://aronworks.com/web-development"
+        />
+
+        <meta
+          property="og:title"
+          content="Web Development Service - AronWorks"
+        />
+        <meta
+          property="og:description"
+          content="We build affordable, accessible and engaging websites for small and medium scale business."
+        />
+
+        <meta property="og:site_name" content="aronworks.com" />
+        <meta name="og:email" content="hello@aronworks.com" />
+        <meta name="og:phone_number" content="+917708521528" />
+
+        {/* Twitter Meta Tag  */}
+        <meta
+          name="twitter:title"
+          content="Web Development Service - AronWorks"
+        />
+        <meta
+          name="twitter:description"
+          content="We build affordable, accessible and engaging websites for small and medium scale business."
+        />
+
+        {/* Item Property Meta Tag */}
+        <meta itemprop="name" content=">Web Development Service - AronWorks" />
+        <meta
+          itemprop="description"
+          content="We build affordable, accessible and engaging websites for small and medium scale business."
         />
       </Head>
       <PageWrapper
@@ -27,12 +62,16 @@ const IndexPage = () => {
         }}
       >
         <>
-          <div
-            className="bg-image bg-gradient bg-gradient-black pb-17 pt-24 pt-lg-32 pb-lg-28"
-            css={`
-              background-image: url(https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
-            `}
-          >
+          <div className="bg-black bg-gradient pb-17 pt-24 pt-lg-32 pb-lg-28">
+            <Image
+              className="opacity-0-4"
+              alt="Web Development"
+              src="/assets/images/web-development-banner.jpg"
+              layout="fill"
+              objectFit="cover"
+              quality={75}
+            />
+            <div className="overlay"></div>
             <Container>
               <Row className="justify-content-center align-items-center">
                 <Col
@@ -47,7 +86,7 @@ const IndexPage = () => {
                   <div className="hero-content text-center dark-mode-texts">
                     <h1 className="gr-text-3 mb-8">Web Development</h1>
                     <p className="gr-text-8">
-                      We build accesible and engaging websites for small and
+                      We build accessible and engaging websites for small and
                       medium scale business to expand their growth.
                     </p>
                   </div>
