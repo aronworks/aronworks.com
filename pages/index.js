@@ -37,6 +37,8 @@ const IndexPage = () => {
           property="og:image"
           content="https://aronworks.com/assets/images/meta/home-page.jpg"
         />
+        <meta property="og:image:alt" content="AronWorks.com" />
+
         <meta property="og:site_name" content="aronworks.com" />
         <meta name="og:email" content="hello@aronworks.com" />
         <meta name="og:phone_number" content="+917708521528" />
