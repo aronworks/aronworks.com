@@ -42,7 +42,7 @@ const Services = () => {
                 </div>
                 <h3 className="card-title gr-text-6 mb-6">Web Development</h3>
                 <p className="gr-text-9 mb-11">
-                  We build accesible and engaging websites for small and medium
+                  We build accessible and engaging websites for small and medium
                   scale business to expand their growth.
                 </p>
                 <Link href="/web-development">
@@ -72,7 +72,7 @@ const Services = () => {
                 </div>
                 <h3 className="card-title gr-text-6 mb-6">Content Writing</h3>
                 <p className="gr-text-9 mb-11">
-                  We write contents for Blogs, and Web pages which includes your
+                  We write contents for Blogs, and Web pages which include your
                   home, landing, about us, contact us etc.
                 </p>
                 <Link href="/content-writing">

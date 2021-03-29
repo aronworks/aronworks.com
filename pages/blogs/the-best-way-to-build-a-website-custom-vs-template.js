@@ -63,6 +63,10 @@ const TermsConditions = () => {
           to throw a little light on what is a custom built website
           and template website."
         />
+        <link
+          rel="canonical"
+          href="https://aronworks.com/blogs/the-best-way-to-build-a-website-custom-vs-template"
+        />
       </Head>
       <PageWrapper
         headerConfig={{
@@ -100,7 +104,7 @@ const TermsConditions = () => {
                   layout="responsive"
                   className="w-100 rounded-10"
                   src="/assets/images/temp.jpeg"
-                  alt=""
+                  alt="Custom Vs Template"
                   width={210}
                   height={140}
                 />

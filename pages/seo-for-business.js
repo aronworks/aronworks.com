@@ -44,6 +44,7 @@ const IndexPage = () => {
           itemProp="description"
           content="We do SEOs to bring in organic traffic which attracts prospective customers to your business."
         />
+        <link rel="canonical" href="https://aronworks.com/seo-for-business" />
       </Head>
       <PageWrapper
         headerConfig={{

@@ -53,6 +53,7 @@ const IndexPage = () => {
           itemProp="description"
           content="We write contents for Blogs, and Web pages which includes your home, landing, about us, contact us etc."
         />
+        <link rel="canonical" href="https://aronworks.com/content-writing" />
       </Head>
       <PageWrapper
         headerConfig={{

@@ -54,8 +54,8 @@ const Content = () => {
                           Customer Centric
                         </h3>
                         <p className="gr-text-9 mb-0">
-                          We prioritise customer satisfaction by creating
-                          positve experience through our services.
+                          We prioritise customer satisfaction by creating a
+                          positive experience through our services.
                         </p>
                       </div>
                     </div>
@@ -77,7 +77,7 @@ const Content = () => {
                           In-House Expertise
                         </h3>
                         <p className="gr-text-9 mb-0">
-                          By amalagamating the latest trends and substance, our
+                          By amalgamating the latest trends and substance, our
                           adroit team imparts tailor-made services and solutions
                           to every client.
                         </p>
@@ -101,9 +101,9 @@ const Content = () => {
                           A 360 Degree Partnership
                         </h3>
                         <p className="gr-text-9 mb-0">
-                          We do end to end partnership, right from infant stage,
-                          through the execution and also after services to our
-                          clients.
+                          We do end to end partnership, right from the infant
+                          stage, through the execution and also after services
+                          to our clients.
                         </p>
                       </div>
                     </div>

@@ -168,6 +168,7 @@ const Contact = () => {
           itemProp="description"
           content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
         />
+        <link rel="canonical" href="https://aronworks.com/contact-us" />
       </Head>
       <PageWrapper
         headerConfig={{
@@ -280,9 +281,9 @@ const Contact = () => {
                 <div className="single-contact-widget">
                   <h3 className="gr-text-6 mb-5">Visit us</h3>
                   <p className="gr-text-7 mb-0">
-                    No. 4025, Mapleton Apt,
+                    No. 5, 26th Street, 5th Avenue, Ashok Nagar
                     <br />
-                    Chennai, India 600100
+                    Chennai, India 600083
                   </p>
                 </div>
               </Col>

@@ -23,7 +23,7 @@ const IndexPage = () => {
           content="Partner with us for all your Web Design, Web Development, Content Writing and SEO needs."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://aronworks.com" />
+        <meta property="og:url" content="https://aronworks.com/" />
 
         <meta
           property="og:title"
@@ -68,6 +68,7 @@ const IndexPage = () => {
         />
 
         <meta property="og:locale" content="en" />
+        <link rel="canonical" href="https://aronworks.com/" />
       </Head>
       <PageWrapper
         headerConfig={{

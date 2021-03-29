@@ -21,7 +21,7 @@ const TermsConditions = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://aronworks.com/blogs/5-reasons-why-small-business-needs-website-in-2021"
+          content="https://aronworks.com/blogs/7-reasons-why-you-should-hire-a-professional-writer"
         />
 
         <meta
@@ -55,6 +55,10 @@ const TermsConditions = () => {
         <meta
           itemProp="description"
           content="What is that fuss about professional writing? Can’t an English teacher do the job?"
+        />
+        <link
+          rel="canonical"
+          href="https://aronworks.com/blogs/7-reasons-why-you-should-hire-a-professional-writer"
         />
       </Head>
       <PageWrapper
@@ -94,7 +98,7 @@ const TermsConditions = () => {
                   layout="responsive"
                   className="w-100 rounded-10"
                   src="/assets/images/content-writing.jpg"
-                  alt=""
+                  alt="Content Writing"
                   width={366.6}
                   height={267}
                 />

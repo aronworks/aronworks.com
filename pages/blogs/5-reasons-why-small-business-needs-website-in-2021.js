@@ -63,6 +63,10 @@ const TermsConditions = () => {
           some reason, more than 40% of small businesses have been
           hesitant to go for one."
         />
+        <link
+          rel="canonical"
+          href="https://aronworks.com/blogs/5-reasons-why-small-business-needs-website-in-2021"
+        />
       </Head>
       <PageWrapper
         headerConfig={{
@@ -100,7 +104,7 @@ const TermsConditions = () => {
                   layout="responsive"
                   className="w-100 rounded-10"
                   src="/assets/images/why-business-need-website.jpg"
-                  alt=""
+                  alt="Why Business Need Website"
                   width={576}
                   height={384}
                 />

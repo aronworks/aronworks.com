@@ -31,7 +31,7 @@ const LocationPin = () => (
     <img
       src="https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png"
       className="pin-icon"
-      alt=""
+      alt="MapGoogle"
     />
   </div>
 );

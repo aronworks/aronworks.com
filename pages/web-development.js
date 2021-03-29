@@ -49,6 +49,7 @@ const IndexPage = () => {
           itemProp="description"
           content="We build affordable, accessible and engaging websites for small and medium scale business."
         />
+        <link rel="canonical" href="https://aronworks.com/web-development" />
       </Head>
       <PageWrapper
         headerConfig={{

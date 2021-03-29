@@ -16,7 +16,7 @@ const News = () => (
               </h2>
               <p className="gr-text-8 px-lg-8 mb-0">
                 We love connecting to our partners by various means. Sharing our
-                thoughts, and experince is one among them.
+                thoughts, and experience is one among them.
               </p>
             </div>
           </div>

@@ -41,6 +41,7 @@ const TermsConditions = () => {
           itemProp="description"
           content="Review the AronWorks Terms and Conditions"
         />
+        <link rel="canonical" href="https://aronworks.com/terms-conditions" />
       </Head>
       <PageWrapper
         headerConfig={{
