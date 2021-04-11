@@ -31,16 +31,23 @@ export default function handler(req, res) {
 
     const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 
-    if (SENDGRID_API_KEY) {
-      const sgMail = require("@sendgrid/mail");
-      sgMail.setApiKey(SENDGRID_API_KEY);
+    if (!SENDGRID_API_KEY) {
+      res.status(200).json({
+        msg: "Thank you for contacting us!",
+        mailMsg: "SENDGRID_API_KEY not found",
+      });
+      return;
+    }
 
-      const msgToAronWorks = {
-        to: "hello@aronworks.com", // Change to your recipient
-        from: "hello@aronworks.com", // Change to your verified sender
-        subject: "Lead from AronWorks Contact Us form!",
-        text: `Name: ${fullName} | Mobile: ${mobile} | Email: ${email} | Message: ${message}`,
-        html: `
+    const sgMail = require("@sendgrid/mail");
+    sgMail.setApiKey(SENDGRID_API_KEY);
+
+    const msgToAronWorks = {
+      to: "hello@aronworks.com", // Change to your recipient
+      from: "hello@aronworks.com", // Change to your verified sender
+      subject: "Lead from AronWorks Contact Us form!",
+      text: `Name: ${fullName} | Mobile: ${mobile} | Email: ${email} | Message: ${message}`,
+      html: `
         <div>
           <div>Hi Team,</div>
           <div><br /></div>
@@ -53,22 +60,22 @@ export default function handler(req, res) {
           <div>Message: ${message}</div>
           <div><br /></div>
         </div>`,
-      };
+    };
 
-      const msgToLead = {
-        to: email, // Change to your recipient
-        from: "hello@aronworks.com", // Change to your verified sender
-        subject: "Thank you for getting in touch with AronWorks!",
-        text: `Hi ${fullName}, 
+    const msgToLead = {
+      to: email, // Change to your recipient
+      from: "hello@aronworks.com", // Change to your verified sender
+      subject: "Thank you for getting in touch with AronWorks!",
+      text: `Hi ${fullName},
 
         We appreciate for you contacting us! We have received your message and would like to thank you for writing to us.
         If your inquiry is urgent, please WhatsApp or call us at +91 7708 521 528 to talk to one of our staff
         members.
-        
+
         Otherwise, We will get back in touch with you ASAP!
-        
+
         Talk to you soon, AronWorks`,
-        html: `
+      html: `
         <div>
           <div>Hi ${fullName},</div>
           <div><br /></div>
@@ -76,6 +83,9 @@ export default function handler(req, res) {
           <div><br /></div>
           <div>
             We have received your message and would like to thank you for writing to us.
+          </div>
+          <div><br /></div>
+          <div>
             If your inquiry is urgent, please WhatsApp or call us at
             <a href="tel:+917708521528">+91 7708 521 528</a> to talk to one of our staff
             members.
@@ -83,25 +93,31 @@ export default function handler(req, res) {
           <div><br /></div>
           <div>Otherwise, We will get back in touch with you ASAP!</div>
           <div><br /></div>
-          <div>Talk to you soon, AronWorks</div>
+          <div>Talk to you soon!</div>
+          <div><br /></div>
+          <img alt="AronWorks" height="30" border="0" style="display:block;" src="https://aronworks.com/assets/images/email/aw-light-logo.png">
         </div>`,
-      };
 
-      sgMail
-        .send(msgToAronWorks)
-        .then(() => {})
-        .catch((error) => {
-          console.error(error);
-        });
+      // template_id: "d-aab36944ef124903abf81c015d42383a",
+    };
 
-      sgMail
-        .send(msgToLead)
-        .then(() => {})
-        .catch((error) => {
-          console.error(error);
-        });
-    }
+    sgMail
+      .send(msgToAronWorks)
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
 
-    res.status(200).json({ msg: "Thank you for contacting us!" });
+    sgMail
+      .send(msgToLead)
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
+
+    res.status(200).json({
+      msg: "Thank you for contacting us!",
+      mailMsg: "Mail sent successfully",
+    });
   }
 }
