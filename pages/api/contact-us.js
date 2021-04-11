@@ -69,15 +69,16 @@ export default function handler(req, res) {
       text: `Hi ${fullName},
 
         We appreciate for you contacting us! We have received your message and would like to thank you for writing to us.
+        
         If your inquiry is urgent, please WhatsApp or call us at +91 7708 521 528 to talk to one of our staff
         members.
 
         Otherwise, We will get back in touch with you ASAP!
 
-        Talk to you soon, AronWorks`,
+        Talk to you soon!, AronWorks`,
       html: `
         <div>
-          <div>Hi ${fullName},</div>
+          <div>Hi <span style="text-transform: capitalize;">${fullName}</span>,</div>
           <div><br /></div>
           <div>We appreciate for you contacting us!</div>
           <div><br /></div>
@@ -95,7 +96,7 @@ export default function handler(req, res) {
           <div><br /></div>
           <div>Talk to you soon!</div>
           <div><br /></div>
-          <img alt="AronWorks" height="30" border="0" style="display:block;" src="https://aronworks.com/assets/images/email/aw-light-logo.png">
+          <img alt="AronWorks" height="40" border="0" style="display:block;" src="https://aronworks.com/assets/images/email/aw-dark-logo.png">
         </div>`,
 
       // template_id: "d-aab36944ef124903abf81c015d42383a",
