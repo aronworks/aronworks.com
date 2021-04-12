@@ -119,6 +119,7 @@ export default function handler(req, res) {
     res.status(200).json({
       msg: "Thank you for contacting us!",
       mailMsg: "Mail sent successfully",
+      SENDGRID_API_KEY: SENDGRID_API_KEY,
     });
   }
 }
