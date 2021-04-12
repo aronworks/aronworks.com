@@ -38,7 +38,7 @@ export default function handler(req, res) {
       });
       return;
     }
-    console.log({ SENDGRID_API_KEY });
+
     const sgMail = require("@sendgrid/mail");
     sgMail.setApiKey(SENDGRID_API_KEY);
 
@@ -104,14 +104,18 @@ export default function handler(req, res) {
 
     sgMail
       .send(msgToAronWorks)
-      .then(() => {})
+      .then(() => {
+        console.log("msgToAronWorks mail sent");
+      })
       .catch((error) => {
         console.error(error);
       });
 
     sgMail
       .send(msgToLead)
-      .then(() => {})
+      .then(() => {
+        console.log("msgToLead mail sent");
+      })
       .catch((error) => {
         console.error(error);
       });
@@ -119,7 +123,6 @@ export default function handler(req, res) {
     res.status(200).json({
       msg: "Thank you for contacting us!",
       mailMsg: "Mail sent successfully",
-      SENDGRID_API_KEY: SENDGRID_API_KEY,
     });
   }
 }
