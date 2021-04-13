@@ -102,23 +102,25 @@ export default function handler(req, res) {
       // template_id: "d-aab36944ef124903abf81c015d42383a",
     };
 
-    sgMail
-      .send(msgToAronWorks)
-      .then(() => {
+    // use async await for async process in Vercel - Check the link below
+    // https://github.com/vercel/vercel/discussions/4440
+    (async () => {
+      try {
+        await sgMail.send(msgToAronWorks);
         console.log("msgToAronWorks mail sent");
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error(error);
-      });
+      }
+    })();
 
-    sgMail
-      .send(msgToLead)
-      .then(() => {
+    (async () => {
+      try {
+        await sgMail.send(msgToLead);
         console.log("msgToLead mail sent");
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error(error);
-      });
+      }
+    })();
 
     res.status(200).json({
       msg: "Thank you for contacting us!",
