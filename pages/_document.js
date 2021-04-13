@@ -32,12 +32,34 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          {/* Google Tag Manager */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5KMKNZG');`,
+            }}
+          />
+          {/* End Google Tag Manager  */}
+
           {/* Global site tag (gtag.js) - Google Analytics */}
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-HMW0EZTJP0"
           ></script>
-          <script async src="/assets/scripts/ga.js"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag() {
+                dataLayer.push(arguments);
+              }
+              gtag("js", new Date());
+              gtag("config", "G-HMW0EZTJP0");`,
+            }}
+          />
+          {/* End - Google Analytics */}
 
           {/* Preconnect - establish network connections early and increase performance */}
           <link rel="preconnect" href="https://wchat.in.freshchat.com" />
@@ -46,8 +68,7 @@ export default class MyDocument extends Document {
             href="https://assetscdn-wchat.in.freshchat.com"
           />
 
-          {/* Browser support for dns-prefetch is slightly different from preconnect support, 
-          so dns-prefetch can serve as a fallback for browsers that don't support preconnect. */}
+          {/* Browser support for dns-prefetch is slightly different from preconnect support, so dns-prefetch can serve as a fallback for browsers that don't support preconnect. */}
           {/* https://web.dev/efficiently-load-third-party-javascript */}
           <link rel="dns-prefetch" href="https://wchat.in.freshchat.com" />
           <link
@@ -81,6 +102,18 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          {/* Google Tag Manager (noscript)  */}
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-5KMKNZG"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"
+            ></iframe>`,
+            }}
+          />
+          {/* End Google Tag Manager (noscript) */}
           <Main />
           <NextScript />
 
