@@ -2,7 +2,7 @@ const nameRegx = /^[A-Za-z_ ][A-Za-z0-9_ ]{2,29}$/;
 const emailRegx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 const mobileRegx = /^(\+\d{1,3}[- ]?)?\d{10}$/;
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method === "POST") {
     const { name: fullName, mobile, email, message } = req.body;
 
@@ -104,23 +104,19 @@ export default function handler(req, res) {
 
     // use async await for async process in Vercel - Check the link below
     // https://github.com/vercel/vercel/discussions/4440
-    (async () => {
-      try {
-        await sgMail.send(msgToAronWorks);
-        console.log("msgToAronWorks mail sent");
-      } catch (error) {
-        console.error(error);
-      }
-    })();
+    try {
+      await sgMail.send(msgToAronWorks);
+      console.log("msgToAronWorks mail sent");
+    } catch (error) {
+      console.error(error);
+    }
 
-    (async () => {
-      try {
-        await sgMail.send(msgToLead);
-        console.log("msgToLead mail sent");
-      } catch (error) {
-        console.error(error);
-      }
-    })();
+    try {
+      await sgMail.send(msgToLead);
+      console.log("msgToLead mail sent");
+    } catch (error) {
+      console.error(error);
+    }
 
     res.status(200).json({
       msg: "Thank you for contacting us!",
