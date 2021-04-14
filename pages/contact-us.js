@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Container, Button } from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
 import Head from "next/head";
@@ -21,8 +21,12 @@ const Contact = () => {
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isMobileValid, setIsMobileValid] = useState(true);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isFormSubmiting, setIsFormSubmiting] = useState(false);
 
   function handleChange(event) {
+    if (isFormSubmiting) {
+      return;
+    }
     setIsFormSubmitted(false);
     const eventName = event.target.name;
     const eventValue = event.target.value;
@@ -75,6 +79,9 @@ const Contact = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
+    if (isFormSubmiting) {
+      return;
+    }
     validateForm();
 
     if (
@@ -108,23 +115,27 @@ const Contact = () => {
       message,
     };
 
-    const response = await fetch("/api/contact-us", {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: "same-origin", // include, *same-origin, omit
-      headers: {
-        "Content-Type": "application/json",
-      },
-      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: JSON.stringify(data), // body data type must match "Content-Type" header
-    });
+    setIsFormSubmiting(true);
 
+    try {
+      await fetch("/api/contact-us", {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: "same-origin", // include, *same-origin, omit
+        headers: {
+          "Content-Type": "application/json",
+        },
+        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: JSON.stringify(data), // body data type must match "Content-Type" header
+      });
+    } catch (error) {
+      console.log(error);
+    }
+
+    setIsFormSubmiting(false);
     setIsFormSubmitted(true);
-
     clearForm();
-
-    return response.json(); // parses JSON response into native JavaScript objects
   }
 
   function clearForm() {
@@ -393,11 +404,16 @@ const Contact = () => {
 
                     <div className="button-block mb-2">
                       <Button
+                        style={isFormSubmiting ? { cursor: "progress" } : {}}
                         onClick={handleSubmit}
-                        className="form-btn w-100"
+                        className={
+                          isFormSubmiting
+                            ? "form-btn w-100 disabled"
+                            : "form-btn w-100"
+                        }
                         type="submit"
                       >
-                        Send
+                        {isFormSubmiting ? "Sending..." : "Send"}
                       </Button>
                     </div>
                   </form>
