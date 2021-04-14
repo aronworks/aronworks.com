@@ -4,6 +4,7 @@ import PageWrapper from "../components/PageWrapper";
 import Head from "next/head";
 import { openFreshChat } from "../utils/freshChat";
 import useFirstRender from "../utils/useFirstRender";
+import swal from "sweetalert";
 
 const nameRegx = /^[A-Za-z_ ][A-Za-z0-9_ ]{2,29}$/;
 const emailRegx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -47,6 +48,35 @@ const Contact = () => {
     }
   }
 
+  // useEffect(function () {
+  //   swal("Thank you!", "We will get back in touch with you ASAP!", "success", {
+  //     buttons: ["Close", "Reach Us Now!"],
+  //   }).then((reachUs) => {
+  //     if (reachUs) {
+  //       openFreshChat();
+  //     }
+  //   });
+  // }, []);
+
+  useEffect(
+    function () {
+      if (isFormSubmitted) {
+        swal(
+          "Thank you!",
+          "We will get back in touch with you ASAP!",
+          "success",
+          {
+            buttons: ["Close", "Reach Us Now!"],
+          }
+        ).then((reachUs) => {
+          if (reachUs) {
+            openFreshChat();
+          }
+        });
+      }
+    },
+    [isFormSubmitted]
+  );
   useEffect(
     function () {
       if (!firstRender && !isFormSubmitted) {
@@ -398,7 +428,7 @@ const Contact = () => {
 
                     {isFormSubmitted && (
                       <p className="gr-text-10 text-green mt-2">
-                        Thank you for contacting us!
+                        Your submission has been sent.
                       </p>
                     )}
 
