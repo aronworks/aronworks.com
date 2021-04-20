@@ -24,6 +24,19 @@ const Contact = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isFormSubmiting, setIsFormSubmiting] = useState(false);
 
+  function gtagReportConversion(url) {
+    var callback = function () {
+      if (typeof url != "undefined") {
+        window.location = url;
+      }
+    };
+    gtag("event", "conversion", {
+      send_to: "AW-389820381/QI-dCLmL-YkCEN3f8LkB",
+      event_callback: callback,
+    });
+    return false;
+  }
+
   function handleChange(event) {
     if (isFormSubmiting) {
       return;
@@ -144,6 +157,7 @@ const Contact = () => {
         referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify(data), // body data type must match "Content-Type" header
       });
+      gtagReportConversion();
     } catch (error) {
       console.log(error);
     }

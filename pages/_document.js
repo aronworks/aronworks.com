@@ -56,7 +56,8 @@ export default class MyDocument extends Document {
                 dataLayer.push(arguments);
               }
               gtag("js", new Date());
-              gtag("config", "G-HMW0EZTJP0");`,
+              gtag("config", "G-HMW0EZTJP0");
+              gtag('config', 'AW-389820381'); // Contact Us Form Submitted conversion ID`,
             }}
           />
           {/* End - Google Analytics */}
