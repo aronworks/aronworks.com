@@ -48,27 +48,12 @@ const Contact = () => {
     }
   }
 
-  // useEffect(function () {
-  //   swal("Thank you!", "We will get back in touch with you ASAP!", "success", {
-  //     buttons: ["Close", "Reach Us Now!"],
-  //   }).then((reachUs) => {
-  //     if (reachUs) {
-  //       openFreshChat();
-  //     }
-  //   });
-  // }, []);
-
   useEffect(
     function () {
       if (isFormSubmitted) {
-        swal(
-          "Thank you!",
-          "We will get back in touch with you ASAP!",
-          "success",
-          {
-            buttons: ["Close", "Reach Us Now!"],
-          }
-        ).then((reachUs) => {
+        swal("Thank you!", "We will get back to you ASAP!", "success", {
+          buttons: ["Close", "Reach Us Now!"],
+        }).then((reachUs) => {
           if (reachUs) {
             openFreshChat();
           }

@@ -68,37 +68,34 @@ export default async function handler(req, res) {
       subject: "Thank you for getting in touch with AronWorks!",
       text: `Hi ${fullName},
 
-        We appreciate for you contacting us! We have received your message and would like to thank you for writing to us.
+        Thanks for reaching out! We’re thrilled to hear from you.
         
-        If your inquiry is urgent, please WhatsApp or call us at +91 7708 521 528 to talk to one of our staff
+        If your inquiry is urgent, please WhatsApp or Call us at +91 7708 521 528 to talk to one of our staff
         members.
-
-        Otherwise, We will get back in touch with you ASAP!
 
         Talk to you soon!, AronWorks`,
       html: `
+      <div>
+        <div>Hi <span style="text-transform: capitalize">${fullName}</span>,</div>
+        <div><br /></div>
+        <div>Thanks for reaching out! We’re thrilled to hear from you.</div>
+        <div><br /></div>
         <div>
-          <div>Hi <span style="text-transform: capitalize;">${fullName}</span>,</div>
-          <div><br /></div>
-          <div>We appreciate for you contacting us!</div>
-          <div><br /></div>
-          <div>
-            We have received your message and would like to thank you for writing to us.
-          </div>
-          <div><br /></div>
-          <div>
-            If your inquiry is urgent, please WhatsApp or call us at
-            <a href="tel:+917708521528">+91 7708 521 528</a> to talk to one of our staff
-            members.
-          </div>
-          <div><br /></div>
-          <div>Otherwise, We will get back in touch with you ASAP!</div>
-          <div><br /></div>
-          <div>Talk to you soon!</div>
-          <div><br /></div>
-          <img alt="AronWorks" height="40" border="0" style="display:block;" src="https://aronworks.com/assets/images/email/aw-dark-logo.png">
-        </div>`,
-
+          If your inquiry is urgent, please WhatsApp or Call us at
+          <a href="tel:+917708521528">+91 7708 521 528</a> to talk to one of our staff
+          members.
+        </div>
+        <div><br /></div>
+        <div>Talk to you soon!</div>
+        <div><br /></div>
+        <img
+          alt="AronWorks"
+          height="40"
+          border="0"
+          style="display: block"
+          src="https://aronworks.com/assets/images/email/aw-dark-logo.png"
+        />
+      </div>`,
       // template_id: "d-aab36944ef124903abf81c015d42383a",
     };
 
