@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import Link from "next/link";
-import { Container, Row, Col } from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 
 import GlobalContext from "../../context/GlobalContext";
 import Logo from "../Logo";
@@ -41,10 +41,10 @@ const Footer = () => {
                 Partner with us for all your Web Design, Web Development,
                 Content Writing and SEO needs.
               </p>
-              {/* <ul className="social-icons py-7 list-unstyled mb-7 mb-lg-0">
+              <ul className="social-icons py-7 list-unstyled mb-7 mb-lg-0">
                 <li className="mr-2">
                   <a
-                    href="/"
+                    href="https://twitter.com/AronWorks"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={iconClassName}
@@ -54,7 +54,7 @@ const Footer = () => {
                 </li>
                 <li className="mr-2">
                   <a
-                    href="/"
+                    href="https://www.facebook.com/aronworks.official"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={iconClassName}
@@ -64,7 +64,7 @@ const Footer = () => {
                 </li>
                 <li className="mr-2">
                   <a
-                    href="https://www.instagram.com/aronworks_official"
+                    href="https://www.instagram.com/aronworks.official"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={iconClassName}
@@ -74,7 +74,7 @@ const Footer = () => {
                 </li>
                 <li className="mr-2">
                   <a
-                    href="/"
+                    href="https://www.linkedin.com/company/aronworks"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={iconClassName}
@@ -82,7 +82,7 @@ const Footer = () => {
                     <i className="icon icon-logo-linkedin"></i>
                   </a>
                 </li>
-              </ul> */}
+              </ul>
             </Col>
 
             <Col lg="8" md="8" className="offset-lg-1">
