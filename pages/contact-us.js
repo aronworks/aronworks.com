@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import React, {useEffect, useState} from "react";
+import {Row, Col, Container, Button} from "react-bootstrap";
 import PageWrapper from "../components/PageWrapper";
 import Head from "next/head";
-import { openFreshChat } from "../utils/freshChat";
+import {openFreshChat} from "../utils/freshChat";
 import useFirstRender from "../utils/useFirstRender";
-import swal from "sweetalert";
+import sweetAlert from "sweetalert";
 
 const nameRegx = /^[A-Za-z_ ][A-Za-z0-9_ ]{2,29}$/;
-const emailRegx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+const emailRegx =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 const mobileRegx = /^(\+\d{1,3}[- ]?)?\d{10}$/;
 
 const Contact = () => {
@@ -22,10 +23,10 @@ const Contact = () => {
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isMobileValid, setIsMobileValid] = useState(true);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [isFormSubmiting, setIsFormSubmiting] = useState(false);
+  const [isFormSubmitting, setIsFormSubmitting] = useState(false);
 
   function gtagReportConversion(url) {
-    var callback = function () {
+    const callback = function () {
       if (typeof url != "undefined") {
         window.location = url;
       }
@@ -38,7 +39,7 @@ const Contact = () => {
   }
 
   function handleChange(event) {
-    if (isFormSubmiting) {
+    if (isFormSubmitting) {
       return;
     }
     setIsFormSubmitted(false);
@@ -64,7 +65,7 @@ const Contact = () => {
   useEffect(
     function () {
       if (isFormSubmitted) {
-        swal("Thank you!", "We will get back to you ASAP!", "success", {
+        sweetAlert("Thank you!", "We will get back to you ASAP!", "success", {
           buttons: ["Close", "Reach Us Now!"],
         }).then((reachUs) => {
           if (reachUs) {
@@ -107,7 +108,7 @@ const Contact = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (isFormSubmiting) {
+    if (isFormSubmitting) {
       return;
     }
     validateForm();
@@ -143,7 +144,7 @@ const Contact = () => {
       message,
     };
 
-    setIsFormSubmiting(true);
+    setIsFormSubmitting(true);
 
     try {
       await fetch("/api/contact-us", {
@@ -162,7 +163,7 @@ const Contact = () => {
       console.log(error);
     }
 
-    setIsFormSubmiting(false);
+    setIsFormSubmitting(false);
     setIsFormSubmitted(true);
     clearForm();
   }
@@ -180,35 +181,35 @@ const Contact = () => {
         <title>Contact Us - AronWorks</title>
         <meta
           name="description"
-          content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
+          content="Feel free to get in touch with us at +91 7708 521 528, +91 44 4503 0227 for consultation."
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://aronworks.com/contact-us" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://aronworks.com/contact-us"/>
 
-        <meta property="og:title" content="Contact Us - AronWorks" />
+        <meta property="og:title" content="Contact Us - AronWorks"/>
         <meta
           property="og:description"
-          content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
+          content="Feel free to get in touch with us at +91 7708 521 528, +91 44 4503 0227 for consultation."
         />
 
-        <meta property="og:site_name" content="aronworks.com" />
-        <meta name="og:email" content="hello@aronworks.com" />
-        <meta name="og:phone_number" content="+917708521528" />
+        <meta property="og:site_name" content="aronworks.com"/>
+        <meta name="og:email" content="hello@aronworks.com"/>
+        <meta name="og:phone_number" content="+917708521528"/>
 
         {/* Twitter Meta Tag  */}
-        <meta name="twitter:title" content="Contact Us - AronWorks" />
+        <meta name="twitter:title" content="Contact Us - AronWorks"/>
         <meta
           name="twitter:description"
-          content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
+          content="Feel free to get in touch with us at +91 7708 521 528, +91 44 4503 0227 for consultation."
         />
 
         {/* Item Property Meta Tag */}
-        <meta itemProp="name" content="Contact Us - AronWorks" />
+        <meta itemProp="name" content="Contact Us - AronWorks"/>
         <meta
           itemProp="description"
-          content="Feel free to get in touch with us at +91 7708 521 528, +91 9940 509 401 for consultation."
+          content="Feel free to get in touch with us at +91 7708 521 528, +91 44 4503 0227 for consultation."
         />
-        <link rel="canonical" href="https://aronworks.com/contact-us" />
+        <link rel="canonical" href="https://aronworks.com/contact-us"/>
       </Head>
       <PageWrapper
         headerConfig={{
@@ -229,7 +230,7 @@ const Contact = () => {
                   <h2 className="title gr-text-2 mb-9">Contact us</h2>
                   <p className="gr-text-8 mb-13">
                     You've got Questions, We've got Answers.
-                    <br />
+                    <br/>
                     <span
                       onClick={openFreshChat}
                       className="cursor-pointer btn-link"
@@ -269,11 +270,13 @@ const Contact = () => {
                     <svg
                       viewBox="0 0 512 512"
                       height="13"
-                      style={{ marginLeft: "8px" }}
+                      style={{marginLeft: "8px"}}
                       fill="rgba(34, 34, 34, 0.7)"
                     >
-                      <path d="M488.727 0H302.545c-12.853 0-23.273 10.42-23.273 23.273s10.42 23.273 23.273 23.273h129.997L192.999 286.09c-9.089 9.089-9.089 23.823 0 32.912a23.195 23.195 0 0016.455 6.816 23.194 23.194 0 0016.457-6.817L465.455 79.458v129.997c0 12.853 10.42 23.273 23.273 23.273s23.273-10.42 23.273-23.273V23.273C512 10.42 501.58 0 488.727 0z" />
-                      <path d="M395.636 232.727c-12.853 0-23.273 10.42-23.273 23.273v209.455H46.545V139.636H256c12.853 0 23.273-10.42 23.273-23.273S268.853 93.091 256 93.091H23.273C10.42 93.091 0 103.511 0 116.364v372.364C0 501.58 10.42 512 23.273 512h372.364c12.853 0 23.273-10.42 23.273-23.273V256c-.001-12.853-10.421-23.273-23.274-23.273z" />
+                      <path
+                        d="M488.727 0H302.545c-12.853 0-23.273 10.42-23.273 23.273s10.42 23.273 23.273 23.273h129.997L192.999 286.09c-9.089 9.089-9.089 23.823 0 32.912a23.195 23.195 0 0016.455 6.816 23.194 23.194 0 0016.457-6.817L465.455 79.458v129.997c0 12.853 10.42 23.273 23.273 23.273s23.273-10.42 23.273-23.273V23.273C512 10.42 501.58 0 488.727 0z"/>
+                      <path
+                        d="M395.636 232.727c-12.853 0-23.273 10.42-23.273 23.273v209.455H46.545V139.636H256c12.853 0 23.273-10.42 23.273-23.273S268.853 93.091 256 93.091H23.273C10.42 93.091 0 103.511 0 116.364v372.364C0 501.58 10.42 512 23.273 512h372.364c12.853 0 23.273-10.42 23.273-23.273V256c-.001-12.853-10.421-23.273-23.274-23.273z"/>
                     </svg>
                   </p>
 
@@ -283,17 +286,19 @@ const Contact = () => {
                       target="_blank"
                       className="text-opacity-eerie-black"
                     >
-                      +91 9940 509 401
+                      +91 44 4503 0227
                     </a>
 
                     <svg
                       viewBox="0 0 512 512"
                       height="13"
-                      style={{ marginLeft: "8px" }}
+                      style={{marginLeft: "8px"}}
                       fill="rgba(34, 34, 34, 0.7)"
                     >
-                      <path d="M488.727 0H302.545c-12.853 0-23.273 10.42-23.273 23.273s10.42 23.273 23.273 23.273h129.997L192.999 286.09c-9.089 9.089-9.089 23.823 0 32.912a23.195 23.195 0 0016.455 6.816 23.194 23.194 0 0016.457-6.817L465.455 79.458v129.997c0 12.853 10.42 23.273 23.273 23.273s23.273-10.42 23.273-23.273V23.273C512 10.42 501.58 0 488.727 0z" />
-                      <path d="M395.636 232.727c-12.853 0-23.273 10.42-23.273 23.273v209.455H46.545V139.636H256c12.853 0 23.273-10.42 23.273-23.273S268.853 93.091 256 93.091H23.273C10.42 93.091 0 103.511 0 116.364v372.364C0 501.58 10.42 512 23.273 512h372.364c12.853 0 23.273-10.42 23.273-23.273V256c-.001-12.853-10.421-23.273-23.274-23.273z" />
+                      <path
+                        d="M488.727 0H302.545c-12.853 0-23.273 10.42-23.273 23.273s10.42 23.273 23.273 23.273h129.997L192.999 286.09c-9.089 9.089-9.089 23.823 0 32.912a23.195 23.195 0 0016.455 6.816 23.194 23.194 0 0016.457-6.817L465.455 79.458v129.997c0 12.853 10.42 23.273 23.273 23.273s23.273-10.42 23.273-23.273V23.273C512 10.42 501.58 0 488.727 0z"/>
+                      <path
+                        d="M395.636 232.727c-12.853 0-23.273 10.42-23.273 23.273v209.455H46.545V139.636H256c12.853 0 23.273-10.42 23.273-23.273S268.853 93.091 256 93.091H23.273C10.42 93.091 0 103.511 0 116.364v372.364C0 501.58 10.42 512 23.273 512h372.364c12.853 0 23.273-10.42 23.273-23.273V256c-.001-12.853-10.421-23.273-23.274-23.273z"/>
                     </svg>
                   </p>
                 </div>
@@ -310,11 +315,13 @@ const Contact = () => {
                     <svg
                       viewBox="0 0 512 512"
                       height="13"
-                      style={{ marginLeft: "8px" }}
+                      style={{marginLeft: "8px"}}
                       fill="rgba(34, 34, 34, 0.7)"
                     >
-                      <path d="M488.727 0H302.545c-12.853 0-23.273 10.42-23.273 23.273s10.42 23.273 23.273 23.273h129.997L192.999 286.09c-9.089 9.089-9.089 23.823 0 32.912a23.195 23.195 0 0016.455 6.816 23.194 23.194 0 0016.457-6.817L465.455 79.458v129.997c0 12.853 10.42 23.273 23.273 23.273s23.273-10.42 23.273-23.273V23.273C512 10.42 501.58 0 488.727 0z" />
-                      <path d="M395.636 232.727c-12.853 0-23.273 10.42-23.273 23.273v209.455H46.545V139.636H256c12.853 0 23.273-10.42 23.273-23.273S268.853 93.091 256 93.091H23.273C10.42 93.091 0 103.511 0 116.364v372.364C0 501.58 10.42 512 23.273 512h372.364c12.853 0 23.273-10.42 23.273-23.273V256c-.001-12.853-10.421-23.273-23.274-23.273z" />
+                      <path
+                        d="M488.727 0H302.545c-12.853 0-23.273 10.42-23.273 23.273s10.42 23.273 23.273 23.273h129.997L192.999 286.09c-9.089 9.089-9.089 23.823 0 32.912a23.195 23.195 0 0016.455 6.816 23.194 23.194 0 0016.457-6.817L465.455 79.458v129.997c0 12.853 10.42 23.273 23.273 23.273s23.273-10.42 23.273-23.273V23.273C512 10.42 501.58 0 488.727 0z"/>
+                      <path
+                        d="M395.636 232.727c-12.853 0-23.273 10.42-23.273 23.273v209.455H46.545V139.636H256c12.853 0 23.273-10.42 23.273-23.273S268.853 93.091 256 93.091H23.273C10.42 93.091 0 103.511 0 116.364v372.364C0 501.58 10.42 512 23.273 512h372.364c12.853 0 23.273-10.42 23.273-23.273V256c-.001-12.853-10.421-23.273-23.274-23.273z"/>
                     </svg>
                   </p>
                 </div>
@@ -322,7 +329,7 @@ const Contact = () => {
                   <h3 className="gr-text-6 mb-5">Visit us</h3>
                   <p className="gr-text-7 mb-0">
                     No. 5, 26th Street, 5th Avenue, Ashok Nagar
-                    <br />
+                    <br/>
                     Chennai, India 600083
                   </p>
                 </div>
@@ -336,7 +343,7 @@ const Contact = () => {
                     data-netlify-honeypot="bot-field"
                   >
                     {/* You still need to add the hidden input with the form name to your JSX form */}
-                    <input type="hidden" name="form-name" value="contact1" />
+                    <input type="hidden" name="form-name" value="contact1"/>
                     <div className="form-group">
                       <label
                         htmlFor="name"
@@ -422,7 +429,7 @@ const Contact = () => {
                         placeholder="Type your message"
                         rows="3"
                         onChange={handleChange}
-                      ></textarea>
+                      />
                     </div>
 
                     {isFormSubmitted && (
@@ -433,16 +440,16 @@ const Contact = () => {
 
                     <div className="button-block mb-2">
                       <Button
-                        style={isFormSubmiting ? { cursor: "progress" } : {}}
+                        style={isFormSubmitting ? {cursor: "progress"} : {}}
                         onClick={handleSubmit}
                         className={
-                          isFormSubmiting
+                          isFormSubmitting
                             ? "form-btn w-100 disabled"
                             : "form-btn w-100"
                         }
                         type="submit"
                       >
-                        {isFormSubmiting ? "Sending..." : "Send"}
+                        {isFormSubmitting ? "Sending..." : "Send"}
                       </Button>
                     </div>
                   </form>

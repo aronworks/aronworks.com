@@ -1,6 +1,6 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
-import {Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import GlobalContext from "../../context/GlobalContext";
 import Logo from "../Logo";
@@ -152,9 +152,9 @@ const Footer = () => {
                       <li className="py-2">
                         <a
                           className={`gr-text-9 font-weight-bold hover-underline active ${contactClassName}`}
-                          href="tel:+919940509401"
+                          href="tel:+914445030227"
                         >
-                          +91 9940 509 401
+                          +91 44 4503 0227
                         </a>
                       </li>
                     </ul>
