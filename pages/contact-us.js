@@ -282,7 +282,7 @@ const Contact = () => {
 
                   <p className="gr-text-7 mb-0 d-flex align-items-center justify-content-start">
                     <a
-                      href="https://api.whatsapp.com/send?phone=919940509401"
+                      href="tel:+914445030227"
                       target="_blank"
                       className="text-opacity-eerie-black"
                     >
