@@ -17,6 +17,7 @@ export const menuItems = [
   { name: "web-development", label: "Web Development" },
   { name: "content-writing", label: "Content Writing" },
   { name: "seo-for-business", label: "SEO for Business" },
+  { name: "https://blog.aronworks.com", label: "Blog", isExternal: true },
   {
     name: "contact-us",
     label: "Contact Us",
